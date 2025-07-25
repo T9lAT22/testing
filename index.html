@@ -52,20 +52,12 @@
     </style>
       <div class="container">
       <a onclick="calander()">
-    <img class="image" src="https://i.postimg.cc/pTnYyyDY/1-removebg-preview.png" alt="Image">
+    <img class="image" src="calander.png" alt="Image">
     </a>
-       <a href="uh7gbram.html">
-    <img class="image" src="https://i.postimg.cc/yxDd7Scs/5-removebg-preview.png" alt="Image">
+       <a onclick="news()">
+    <img class="image" src="news.png" alt="Image">
     </a>
-     <a href="apposs.html">
-    <img class="image" src="https://i.postimg.cc/x15SF1NR/3-removebg-preview.png" alt="Image">
-    </a>
-    <a href="java.html">
-    <img class="image" src="https://i.postimg.cc/25xNM8qG/2-removebg-preview.png" alt="Image">
-    </a>
-    <a href="settings.html">
-    <img class="image" src="https://i.postimg.cc/1zFr3f00/4-removebg-preview.png" alt="Image">
-    </a>
+  
   </div>
 
 
@@ -91,6 +83,12 @@
 <script>
   function calander(){
     const div = document.getElementById('CalanderDiv');
+    div.style.display = div.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<script>
+  function news(){
+    const div = document.getElementById('newsDiv');
     div.style.display = div.style.display === 'block' ? 'none' : 'block';
   }
 </script>
@@ -134,7 +132,67 @@
         transform: scale(1);
       }
     }
+
+      #newsDiv {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #757575;
+    color: white;
+    inset: 0;
+    margin:auto;
+    position: fixed;
+    z-index: 1000;
+    border-radius:20px; 
+    opacity:85%; 
+    width:600px;
+    height: 500px; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-in-out;
+
+  }
 </style>
+
+<div id="newsDiv">
+  <button class="close-btn" onclick="document.getElementById('newsDiv').style.display = 'none';">×</button>
+
+
+ 
+    <section>
+    <h2>USJ News & Events Hub</h2>
+    <p>Stay updated with all the latest happenings at USJ.</p>
+    <p class="post">Posted by: developer</p>
+  </section>
+
+     <section>
+    <h2>School is starting...</h2>
+    <p>School is going to start at Augest 6th. And also parents orientation is in Augest 12th.</p>
+    <p class="post">Posted by: developer</p>
+  </section>
+
+
+<style>
+  section {
+  background-color:black;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius:20px;
+    color:white;
+}
+
+</style>
+
+<style>
+   .post {
+    color:#adacac;
+    font-size:14px;
+   }
+    
+</style>
+
+</div>
+
     
 </body>
 </html>
