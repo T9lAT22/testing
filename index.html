@@ -20,7 +20,105 @@
         body{
             background-color: #141414;
         }
+          .image {
+      width: 115px; /* Adjust this value to fit your image size */
+      height: 100px; /* Adjust this value to fit your image size */
+      padding:10px 20px;
+    }
+    .image:hover {
+        background-color:#000000;
+        border-radius:100px;
+         animation: glowing 2s infinite;
+  box-shadow: 5px 10px 20px  #ffffff;
+              cursor: url('https://t9lat9.netfy.blog/hover22.png'), auto;
+                animation: shake-animation 0.5s linear infinite;
+}
+
+@keyframes shake-animation {
+  /* Define the shaking animation */
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+
+    }
     </style>
+      <div class="container">
+      <a onclick="calander()">
+    <img class="image" src="https://i.postimg.cc/pTnYyyDY/1-removebg-preview.png" alt="Image">
+    </a>
+       <a href="uh7gbram.html">
+    <img class="image" src="https://i.postimg.cc/yxDd7Scs/5-removebg-preview.png" alt="Image">
+    </a>
+     <a href="apposs.html">
+    <img class="image" src="https://i.postimg.cc/x15SF1NR/3-removebg-preview.png" alt="Image">
+    </a>
+    <a href="java.html">
+    <img class="image" src="https://i.postimg.cc/25xNM8qG/2-removebg-preview.png" alt="Image">
+    </a>
+    <a href="settings.html">
+    <img class="image" src="https://i.postimg.cc/1zFr3f00/4-removebg-preview.png" alt="Image">
+    </a>
+  </div>
+
+
+  <div id="CalanderDiv">
+  <button class="close-btn" onclick="document.getElementById('CalanderDiv').style.display = 'none';">×</button>
+
+
+ 
+    <iframe class="frame" src="https://calendar.google.com/calendar/u/0/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America/Chicago&title=USJ+Full+Calendar+of+Events&src=MWQyOW1iMmRqdWM1cHJubHRkb2cxMjc4ZmMzYjRmdnNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285F4&pli=1"></iframe>
+  <style>
+    .frame{
+      width:100%;
+      height:95%;
+      bottom:0;
+      position: absolute;
+      border:none;
+      border-radius:0px 0px 20px 20px;
+      left:0;
+    }
+  </style>
+           
+</div>
+<script>
+  function calander(){
+    const div = document.getElementById('CalanderDiv');
+    div.style.display = div.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<style>
+     #CalanderDiv {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #c0c0c0;
+    color: white;
+    inset: 0;
+    margin:auto;
+    position: fixed;
+    z-index: 1000;
+    border-radius:20px; 
+    opacity:85%; 
+    width:85%;
+    height: 73%; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-in-out;
+
+  }
+   .close-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    font-size:20px;
+}
+
+
+</style>
     
 </body>
 </html>
