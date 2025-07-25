@@ -99,7 +99,7 @@
     display: none;
     margin-top: 20px;
     padding: 10px;
-    background-color: #c0c0c0;
+    background-color: #797878;
     color: white;
     inset: 0;
     margin:auto;
@@ -111,7 +111,7 @@
     height: 73%; 
     overflow-x: hidden;
     overflow-y: auto;
-    animation: fadeIn 0.3s ease-in-out;
+      animation: popIn 0.5s ease-out forwards;
 
   }
    .close-btn {
@@ -124,7 +124,16 @@
     font-size:20px;
 }
 
-
+ @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 80%;
+        transform: scale(1);
+      }
+    }
 </style>
     
 </body>
