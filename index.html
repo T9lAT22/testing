@@ -52,6 +52,17 @@
       align-items: center;
       height: 100vh; /* Adjust this value to fit your needs */
     }
+     .icon {
+      width: 60px;
+      height: 60px;
+      filter: invert(1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+    }
 
 
 @keyframes shake-animation {
@@ -65,10 +76,10 @@
     </style>
       <div class="container">
       <a onclick="calander()">
-    <img class="image" src="calander.png" alt="Image">
+    <img src="https://img.icons8.com/ios-filled/100/calendar.png" alt="Calendar" class="icon">
     </a>
        <a onclick="news()">
-    <img class="image" src="news.png" alt="Image">
+    <img src="https://img.icons8.com/ios-filled/100/news.png" alt="News" class="icon">
     </a>
   
   </div>
