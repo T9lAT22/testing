@@ -103,6 +103,12 @@
       }
     }
 
+    // Clear chat every 1 minute (60000 ms)
+    setInterval(() => {
+      db.ref('messages').remove();       // Clear Firebase messages
+      chatBox.innerHTML = '';            // Clear chat UI
+    }, 20000);
+
     db.ref('messages').on('child_added', (snapshot) => {
       const msg = snapshot.val();
       const msgDiv = document.createElement('div');
