@@ -8,6 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
+      text-align:center;
     }
     #chatBox {
       border: 1px solid #ccc;
@@ -15,15 +16,18 @@
       height: 300px;
       overflow-y: scroll;
       margin-bottom: 10px;
-      background-color: #f9f9f9;
+      background-color: #0687dd;
+      border-radius: 10px;
     }
     #messageInput, #nameInput {
       width: 80%;
       padding: 8px;
       margin-bottom: 10px;
+      border-radius: 10px;
     }
     #sendBtn {
       padding: 8px 12px;
+      border-radius: 10px;
     }
     .msg {
       margin: 5px 0;
@@ -40,7 +44,7 @@
 </head>
 <body>
 
-  <h2>Live Chat</h2>
+  <h2>USJ Chat</h2>
   <input type="text" id="nameInput" placeholder="Enter your name..." />
   <div id="chatBox"></div>
   <input type="text" id="messageInput" placeholder="Type your message..." disabled />
@@ -107,7 +111,7 @@
     setInterval(() => {
       db.ref('messages').remove();       // Clear Firebase messages
       chatBox.innerHTML = '';            // Clear chat UI
-    }, 20000);
+    }, 120000);
 
     db.ref('messages').on('child_added', (snapshot) => {
       const msg = snapshot.val();
